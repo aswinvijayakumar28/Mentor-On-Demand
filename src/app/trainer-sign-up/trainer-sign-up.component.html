@@ -1,0 +1,152 @@
+<div id="signup-bg">
+    <nav class="navbar bg-trans navbar-dark ">
+
+        <a class="navbar-brand" href="#"><span style="padding: 20px; font-size: 36px;"
+                class="fa fa-address-book"></span>MENTOR ON DEMAND</a>
+
+        <ul class="nav navbar-inverse navbar-right">
+
+            <li class="nav-item dropdown ">
+                <a style="color: white" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span style="padding: 7px;" class="fa fa-user-plus"></span> Login
+                </a>
+
+                <div class="dropdown-menu dropdown-menu-right " aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" routerLink="/user-login">User</a>
+                    <a class="dropdown-item" routerLink="/trainer-login">Trainer</a>
+
+                </div>
+            </li>
+
+            <li class="pt-2"><a style="color: aliceblue;padding: 7px;" routerLink="/home"><span style="padding: 7px;"
+                        class="fa fa-home"></span> Home</a></li>
+            <li class="pt-2"><a style="color: aliceblue;padding: 7px;" href="search.html"><span style="padding: 7px;"
+                        class="fa fa-search"></span> Search Trainers</a></li>
+
+
+        </ul>
+    </nav>
+
+    <div class="container ">
+
+
+        <div class="row  justify-content-center ">
+
+
+            <div style="background: rgb(0, 0, 0,0.5)" class="card card-signin my-5 col-md-5 ">
+                <div class="card-body">
+                    <h5 style="color: white" class="card-title text-center">Trainer Sign In</h5>
+
+                    <form [formGroup]="trainerSignUp" (ngSubmit)="onSubmit()" class="form-signin">
+                        <div class="form-label-group">
+                            <input formControlName="firstName" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }"
+                                style="background: rgb(0, 0, 0,0.5)" type="text" id="firstName" class="form-control"
+                                placeholder="First Name" required autofocus>
+                            <label style="color: white" for="firstName">Name</label>
+                            <span class="help-block" *ngIf="((trainerSignUp.get('firstName').touched ||
+                                     trainerSignUp.get('firstName').dirty) &&
+                                     trainerSignUp.get('firstName').errors)">
+                                <span style="color:red" *ngIf="trainerSignUp.get('firstName').errors.required">
+                                    <br>First Name is required
+                                </span></span>
+                        </div>
+                        <div class="form-label-group">
+                            <input formControlName="lastName" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }"
+                                style="background: rgb(0, 0, 0,0.5)" type="text" id="lastName" class="form-control"
+                                placeholder="Last Name" required autofocus>
+                            <label style="color: white" for="lastName">Name</label>
+                            <span class="help-block" *ngIf="((trainerSignUp.get('lastName').touched ||
+                                     trainerSignUp.get('lastName').dirty) &&
+                                     trainerSignUp.get('lastName').errors)">
+                                <span style="color:red" *ngIf="trainerSignUp.get('lastName').errors.required">
+                                    <br>Last Name is required
+                                </span></span>
+                        </div>
+
+
+                        <div class="form-label-group">
+                            <input formControlName="email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }"
+                                style="background: rgb(0, 0, 0,0.5)" type="email" id="inputEmail" class="form-control"
+                                placeholder="Email address" required>
+                            <label style="color: white" for="inputEmail">Email address</label>
+                            <span class="help-block" *ngIf="((trainerSignUp.get('email').touched ||
+                                     trainerSignUp.get('email').dirty) &&
+                                     trainerSignUp.get('email').errors)">
+                                <span style="color:red" *ngIf="trainerSignUp.get('email').errors.required">
+                                    <br>Email is required
+                                </span></span>
+                        </div>
+
+                        <div class="form-label-group">
+                            <input formControlName="contactNumber" [ngClass]="{ 'is-invalid': submitted && f.contactNumber.errors }"
+                                style="background: rgb(0, 0, 0,0.5)" type="number" id="contactNumber" class="form-control"
+                                placeholder="Contact Number" required>
+                            <label style="color: white" for="contactNumber">Contact Number</label>
+                            <span class="help-block" *ngIf="((trainerSignUp.get('contactNumber').touched ||
+                                     trainerSignUp.get('contactNumber').dirty) &&
+                                     trainerSignUp.get('contactNumber').errors)">
+                                <span style="color:red" *ngIf="trainerSignUp.get('contactNumber').errors.required">
+                                    <br>Invalid Contact Number
+                                </span></span>
+                        </div>
+
+                        <div class="form-label-group">
+                            <input formControlName="yearsOfExperience" [ngClass]="{ 'is-invalid': submitted && f.yearsOfExperience.errors }"
+                                style="background: rgb(0, 0, 0,0.5)" type="number" id="yearsOfExperience" class="form-control"
+                                placeholder="Years Of Experience" required>
+                            <label style="color: white" for="yearsOfExperience">years Of Experience</label>
+                            
+                        </div>
+                        
+                        
+
+                        <hr>
+
+                        <div class="form-label-group">
+                            <input formControlName="password"
+                                [ngClass]="{ 'is-invalid': submitted && f.password.errors }"
+                                style="background: rgb(0, 0, 0,0.5)" type="password" id="inputPassword"
+                                class="form-control" placeholder="Password" required>
+                            <label style="color: white" for="inputPassword">Password</label>
+                            <span class="help-block" *ngIf="((trainerSignUp.get('password').touched ||
+                            trainerSignUp.get('password').dirty) &&
+                            trainerSignUp.get('password').errors)">
+                                <span style="color:red" *ngIf="trainerSignUp.get('password').errors.required">
+                                    <br>Password is required
+                                </span>
+                                <span style="color:red" *ngIf="trainerSignUp.get('password').errors.minlength "><br>
+                                    password must be greater than 6 characters
+                                </span>
+                            </span>
+                        </div>
+
+                        <div class="form-label-group">
+                            <input formControlName="checkPassword"
+                                [ngClass]="{ 'is-invalid': submitted && f.checkPassword.errors }"
+                                style="background: rgb(0, 0, 0,0.5)" type="password" id="inputConfirmPassword"
+                                class="form-control" placeholder="Password" required>
+                            <label style="color: white" for="inputConfirmPassword">Confirm password</label>
+                            <span class="help-block" *ngIf="((trainerSignUp.get('password').touched ||
+                            trainerSignUp.get('checkPassword').dirty) &&
+                            trainerSignUp.get('checkPassword').errors)">
+                                <span style="color:red" *ngIf="trainerSignUp.get('checkPassword').errors.required">
+                                    <br>Password is required
+                                </span>
+                                <span style="color:red" *ngIf="trainerSignUp.get('checkPassword').errors.minlength "><br>
+                                    password must be greater than 6 characters
+                                </span>
+                            </span>
+                        </div>
+
+                        <button [disabled]="loading" class="btn btn-lg btn-primary btn-block py-1 text-uppercase"
+                            type="submit">Register</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>

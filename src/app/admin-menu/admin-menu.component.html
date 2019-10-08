@@ -1,0 +1,41 @@
+<nav class="navbar bg-trans navbar-dark">
+
+    <a class="navbar-brand" routerLink="/home"><span style="padding: 20px; font-size: 36px;"
+            class="fa fa-address-book"></span>MENTOR ON DEMAND</a>
+
+    <ul class="nav navbar-inverse navbar-right">
+       
+       
+       
+        <li class="pt-2" ><a style="color: aliceblue;padding: 7px;" routerLink="/home"><span style="padding: 7px;"
+                    class="fa fa-sign-out"></span> Logout</a></li>
+       
+
+
+    </ul>
+</nav>
+
+
+<br>
+<br>
+
+<div class="container col-md-6  " >
+        
+    <div class="col-md-12 pt-3" (click)="blockUser()" >
+        <div class="card-counter primary">
+            <i class="fa fa-search"></i>
+            <span class="count-numbers" >Block User</span>
+            <span class="count-name">Block user</span>
+        </div>
+    </div>
+
+    
+    <div class="col-md-12 pt-3" (click)="technologies()">
+        <div class="card-counter success">
+            <i class="fa fa-clock-o"></i>
+            <span class="count-numbers">Technologies</span>
+            <span class="count-name">View & Edit Courses </span>
+        </div>
+    </div>
+
+</div>

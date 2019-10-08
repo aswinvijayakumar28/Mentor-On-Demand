@@ -1,0 +1,54 @@
+<nav class="navbar bg-trans navbar-dark">
+
+    <a class="navbar-brand" href="#"><span style="padding: 20px; font-size: 36px;" class="fa fa-address-book"></span>
+        MENTOR ON DEMAND</a>
+
+    <ul class="nav navbar-inverse navbar-right">
+
+
+      
+
+
+        <li class="pt-2"><a style="color: aliceblue;padding: 7px;" routerLink="/admin-menu"><span style="padding: 7px;"
+                    class="fa fa-reorder"></span> Menu</a></li>
+
+
+    </ul>
+</nav>
+
+<div class="container ">
+
+    <h2 style="color: white;margin-left: 50px; " class="display-4">Skills</h2>
+    <br>
+    <a routerLink="/admin-add-technologies" style="color: white;margin-left: 55px; "
+        class="btn btn-success col-md-8">Add <span style="color: white" class="fa fa-plus-circle"></span></a>
+
+</div>
+
+
+
+<div class="container col-md-8 mt-4" style="background:transparent; margin-left: 90px;">
+
+    <ul class="technologiesArray" style="list-style: none">
+        <li *ngFor="let technology of technologiesArray">
+            <div class="media border p-3 mt-4" style="border-radius: 1rem;color: white; background:rgb(0, 0, 0,0.5)">
+
+
+                <div class="media-body  " style="background:transparent">
+                    <div class="row align-items-center justify-content-center ">
+
+                        <h6 class="pt-3 col-md-2"><b>{{technology.technologyName}}</b></h6>
+                        <h6 class=" pt-3 col-md-2">Fee :<b> {{technology.fees}}</b></h6>
+                        <h6 class=" pt-3 col-md-2">Duration :<b> {{technology.duration}}</b></h6>
+                        <button (click) ="onEdit(technology.id)" style=" color: black ;border-radius: 2rem"
+                                class="btn btn-danger ml-5 "> <i class="fa fa-edit fa-lg"></i></button>
+
+                        <button style=" color: black ;border-radius: 2rem" (click) ="onDelete(technology.id)" class="btn btn-warning ml-3 "> <i
+                                class="fa fa-trash-o fa-lg"></i></button>
+
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>

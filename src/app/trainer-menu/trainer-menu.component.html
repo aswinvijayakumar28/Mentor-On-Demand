@@ -1,0 +1,51 @@
+<nav class="navbar bg-trans navbar-dark">
+
+    <a class="navbar-brand" href="#"><span style="padding: 10px; font-size: 36px;"
+            class="fa fa-address-book"></span>Mentor On Demand</a>
+
+    <ul class="nav navbar-inverse navbar-right">
+        <li><a style="color: aliceblue;padding: 7px;" routerLink="/notification"><span style="padding: 7px;"
+                    class="fa fa-envelope"></span> Notifications</a></li>
+
+                    <li><a style="color: aliceblue; padding: 7px;" routerLink="/trainer-payment-history"><span style="padding: 7px;"
+                        class="fa fa-calendar"></span>Payment History</a></li>
+                        <li><a style="color: aliceblue; padding: 7px;" routerLink="/trainer-payment-withdraw"><span style="padding: 7px;"
+                            class="fa fa-bank"></span>Payment Withdraw</a></li>
+    
+        <li><a style="color: aliceblue; padding: 7px;" routerLink="/home"><span style="padding: 7px;"
+                    class="fa fa-sign-out"></span>Logout</a></li>
+    </ul>
+</nav>
+
+<br>
+<br>
+
+
+<div class="container col-md-5  " >
+        
+        <div class="col-md-12 pt-3" (click)="editSkills()" >
+            <div class="card-counter primary">
+                <i class="fa fa-search"></i>
+                <span class="count-numbers" >Edit Skills</span>
+                <span class="count-name">Search for  technology trainings</span>
+            </div>
+        </div>
+
+        <div class="col-md-12 pt-3" (click)="currentTrainings()" >
+            <div class="card-counter danger">
+                <i class="fa fa-thumbs-o-up"></i>
+                <span class="count-numbers">Current Trainings</span>
+                <span class="count-name">View on going training details</span>
+            </div>
+        </div>
+
+        <div class="col-md-12 pt-3" (click)="completedTrainings()">
+            <div class="card-counter success">
+                <i class="fa fa-clock-o"></i>
+                <span class="count-numbers">Completed Trainings</span>
+                <span class="count-name">View completed training details</span>
+            </div>
+        </div>
+  
+</div>
+

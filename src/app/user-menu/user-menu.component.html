@@ -1,0 +1,97 @@
+<nav class="navbar bg-trans navbar-dark">
+
+    <a class="navbar-brand" href="#"><span style="padding: 20px; font-size: 36px;"
+            class="fa fa-address-book"></span>MENTOR ON DEMAND</a>
+
+    <ul class="nav navbar-inverse navbar-right">
+
+        <li><a style="color: aliceblue;padding: 7px;"  routerLink="/notification"><span style="padding: 7px;"
+                    class="fa fa-envelope"></span> Notifications</a></li>
+
+
+        <li><a style="color: aliceblue; padding: 7px;" routerLink="/home"><span style="padding: 7px;"
+                    class="fa fa-sign-out"></span>Logout</a></li>
+
+
+
+
+    </ul>
+</nav>
+
+
+
+<div class="container col-md-6  " >
+        
+            <div class="col-md-12 pt-3" (click)="searchTraining()" >
+                <div class="card-counter primary">
+                    <i class="fa fa-search"></i>
+                    <span class="count-numbers" >Training Search</span>
+                    <span class="count-name">Search for  technology trainings</span>
+                </div>
+            </div>
+    
+            <div class="col-md-12 pt-3" (click)="currentTrainings()" >
+                <div class="card-counter danger">
+                    <i class="fa fa-thumbs-o-up"></i>
+                    <span class="count-numbers">Current Trainings</span>
+                    <span class="count-name">View on going training details</span>
+                </div>
+            </div>
+    
+            <div class="col-md-12 pt-3" (click)="completedTrainings()">
+                <div class="card-counter success">
+                    <i class="fa fa-clock-o"></i>
+                    <span class="count-numbers">Completed Trainings</span>
+                    <span class="count-name">View completed training details</span>
+                </div>
+            </div>
+      
+    </div>
+
+<!--div class="container">
+
+
+    <div class="col-md-12 display-4 " onclick="window.location.replace('user-search.html');">
+        <span class="border" style="color:white;padding: 10px;border-radius: 1rem; background: rgb(0, 0, 0,0.5)">Search
+            Trainer</span>
+    </div>
+    <div class="col-md-12 display-4 py-5" onclick="window.location.replace('user-current-trainings.html');">
+        <span class="border" style="color:white;padding: 10px;border-radius: 1rem; background: rgb(0, 0, 0,0.5)">Current
+            Trainings</span>
+    </div>
+    <div class="col-md-12 py-3" onclick="window.location.replace('user-completed-trainigns.html');">
+        <span class="border display-4"
+            style="color:white;padding: 10px; border-radius: 1rem; background: rgb(0, 0, 0,0.5)">Completed
+            Trainings</span>
+    </div>
+
+
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card-counter primary">
+                <i class="fa fa-code-fork"></i>
+                <span class="count-numbers">12</span>
+                <span class="count-name">Flowz</span>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card-counter danger">
+                <i class="fa fa-ticket"></i>
+                <span class="count-numbers">599</span>
+                <span class="count-name">Instances</span>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card-counter success">
+                <i class="fa fa-database"></i>
+                <span class="count-numbers">6875</span>
+                <span class="count-name">Data</span>
+            </div>
+        </div>
+    </div>
+</div>-->

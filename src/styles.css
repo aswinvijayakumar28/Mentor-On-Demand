@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+
+body{
+     background: url('./assets/images/mentorbg.jpg') no-repeat center center fixed;
+     background-size: cover;
+}
+.card-signin {
+
+     border-radius: 1rem;
+   }
+ 
+   .card-signin .card-body {
+     padding: 2rem;
+   }
+ 
+   .form-signin .btn {
+    font-size: 15px;
+     border-radius: 5rem;
+     letter-spacing: .1rem;
+     font-weight: bold;
+     padding: 1rem;
+     
+   }
+   .form-label-group {
+     position: relative;
+     margin-bottom: 1rem;
+   }

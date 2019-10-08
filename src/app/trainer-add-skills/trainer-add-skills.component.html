@@ -1,0 +1,55 @@
+<nav class="navbar bg-trans navbar-dark">
+
+    <a class="navbar-brand" href="#"><span style="padding: 20px; font-size: 36px;"
+        class="fa fa-user"></span>MENTOR ON DEMAND</a>
+
+    <ul class="nav navbar-inverse navbar-right">
+
+      <li><a style="color: aliceblue;padding: 7px;" routerLink="/notification"><span style="padding: 7px;" class="fa fa-envelope"></span>
+          Notifications</a></li>
+          <li><a style="color: aliceblue;padding: 7px;" routerLink="/trainer-completed-trainings"><span style="padding: 7px;"
+            class="fa fa-thumbs-o-up"></span> Completed Trainings</a></li>
+<li><a style="color: aliceblue;padding: 7px;" routerLink="/trainer-current-trainings"><span style="padding: 7px;"
+            class="fa fa-clock-o"></span> Current Trainings</a></li>
+
+
+      <li><a style="color: aliceblue;padding: 7px;" routerLink="/trainer-menu"><span style="padding: 7px;"
+            class="fa fa-reorder"></span> Menu</a></li>
+            <li><a style="color: aliceblue;padding: 7px;" routerLink="/home"><span style="padding: 7px;"
+                class="fa fa-sign-out"></span> Logout</a></li>
+
+
+    </ul>
+  </nav>
+  <div class="container ">
+
+    <h2 style="color: white;margin-left: 50px; " class="display-4">Add Skills</h2>
+    <br>
+
+
+</div>
+<div class="container">
+    <div class="card card-signin my-5 col-md-4" style="background: rgb(0, 0, 0,0.5); border-radius: 2rem;">
+        <div class="card-body" style="background: transparent; border-radius: 2rem;">
+            <h5 class="card-title text-center" style="color: white">Add Skill</h5>
+            <br>
+         <form [formGroup]="trainerAddSkills" (ngSubmit)="onSubmit()"  class="form-signin" >
+            <div class="form-group">
+                <input formControlName="technology" style="background: rgb(0, 0, 0,0.5)" type="text" id="technology" class="form-control"
+                placeholder="Technology" required autofocus>
+            <label  style="color: white"for="technology">Technology</label>
+        </div>
+        <div class="form-group">
+            <input formControlName="timeSlot" style="background: rgb(0, 0, 0,0.5)" type="text" id="timeSlot" class="form-control"
+            placeholder="Time Slot (ex: 4pm-6pm)" required autofocus>
+        <label  style="color: white"for="technology">Time Slot</label>
+    </div>
+                <hr style="background-color: white">
+
+                <button class="btn btn-md btn-success btn-block text-uppercase" type="submit">Add</button>
+
+            </form> 
+        </div>
+    </div>
+</div>
+

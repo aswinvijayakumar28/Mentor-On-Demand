@@ -1,0 +1,52 @@
+<nav class="navbar bg-trans navbar-dark">
+
+    <a class="navbar-brand" href="#"><span style="padding: 10px; font-size: 36px;"
+            class="fa fa-address-book"></span>Mentor On Demand</a>
+
+    <ul class="nav navbar-inverse navbar-right">
+        <li><a style="color: aliceblue;padding: 7px;" routerLink="/notification"><span style="padding: 7px;"
+                    class="fa fa-envelope"></span> Notifications</a></li>
+
+        <li><a style="color: aliceblue;padding: 7px;" routerLink="/trainer-menu"><span style="padding: 7px;"
+                    class="fa fa-bars"></span> Menu</a></li>
+        <li><a style="color: aliceblue; padding: 7px;" routerLink="/home"><span style="padding: 7px;"
+                    class="fa fa-sign-out"></span>Logout</a></li>
+    </ul>
+</nav>
+<nav class="navbar bg-trans navbar-dark">
+    <span>
+        <h2 class="display-4" style="color: aliceblue">Payment Status<span style="padding: 7px;"
+                class="fa fa-book"></span></h2>
+    </span>
+
+</nav>
+<div class="container mt-3">
+
+    <h2 class="display-4" style="color:white">{{userName}}</h2>
+
+    <ul class="paymentsArray" style="list-style: none">
+        <li *ngFor="let payment of paymentsArray">
+            <div class="media border p-3"
+                style="border-radius: 1rem; background:rgba(5, 115, 143, 0.7);color: seashell">
+
+
+                <div class="media-body">
+                    <div class="row align-items-center justify-content-center">
+
+                        <h6 class="col-md-3 pt-2"><b>{{payment.trainingName}}</b></h6>
+
+                        <span class="col-md-3 pt-2">Payment Pending :
+                           {{payment.paymentPending}}
+                        </span>
+                        <p  class="col-md-2">Payment Released : {{payment.paymentReleased}}</p>
+                        <p class="col-md-2">Total Payment : {{payment.totalPayment}}</p>
+
+                        
+
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+</div>

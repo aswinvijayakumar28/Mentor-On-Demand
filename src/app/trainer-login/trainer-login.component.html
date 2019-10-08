@@ -1,0 +1,61 @@
+<nav class="navbar bg-trans navbar-dark">
+
+    <a class="navbar-brand" href="#"><span style="padding: 20px; font-size: 36px;"
+            class="fa fa-address-book"></span>MENTOR ON DEMAND</a>
+
+    <ul class="nav navbar-inverse navbar-right">
+
+        <li class="nav-item dropdown ">
+            <a style="color: white" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span style="padding: 7px;" class="fa fa-user-plus"></span> Sign Up
+            </a>
+
+            <div class="dropdown-menu dropdown-menu-right " aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" routerLink="/user-sign-up">User</a>
+                <a class="dropdown-item" routerLink="/trainer-sign-up">Trainer</a>
+
+            </div>
+        </li>
+
+        <li class="pt-2"><a style="color: aliceblue;padding: 7px;" routerLink="/home"><span style="padding: 7px;"
+                    class="fa fa-home"></span> Home</a></li>
+
+
+
+    </ul>
+</nav>
+
+<div class="container ">
+
+
+    <div class="row justify-content-center">
+
+
+        <div style="background: rgb(0, 0, 0,0.5)" class="card card-signin my-5 ">
+            <div class="card-body ">
+                <h5 style="color: white" class="card-title text-center">Trainer Sign In</h5>
+             <form [formGroup]="trainerLogin" (ngSubmit)="onSubmit()" style="background:transparent" action="user-menu.html" class="form-signin">
+                    <div class="form-label-group">
+                        <input style="background: rgb(0, 0, 0,0.5)" formControlName="userName" type="email" id="userName" class="form-control"
+                            placeholder="User Name" required autofocus>
+                        <label style="color: white" for="inputEmail">User Name</label>
+                    </div>
+
+                    <div class="form-label-group">
+                        <input formControlName="password" style="background: rgb(0, 0, 0,0.5)" type="password" id="inputPassword"
+                            class="form-control" placeholder="Password" required>
+                        <label style="color: white" for="inputPassword">Password</label>
+                    </div>
+
+
+                    <button class="btn btn-lg btn-primary btn-block py-1 text-uppercase" type="submit">Sign in</button>
+
+
+                </form> 
+            </div>
+        </div>
+    </div>
+
+
+</div>

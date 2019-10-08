@@ -1,0 +1,65 @@
+<nav class="navbar bg-trans navbar-dark">
+
+    <a class="navbar-brand" href="#"><span style="padding: 20px; font-size: 36px;"
+            class="fa fa-address-book"></span> MENTOR ON DEMAND</a>
+
+    <ul class="nav navbar-inverse navbar-right">
+
+       
+        
+
+
+        <li class="pt-2"><a style="color: aliceblue;padding: 7px;" routerLink="/admin-menu"><span style="padding: 7px;"
+                    class="fa fa-reorder"></span> Menu</a></li>
+
+
+    </ul>
+</nav>
+<div class="container ">
+
+        <h2 style="color: white;margin-left: 50px; " class="display-4">Add Technology</h2>
+        <br>
+
+
+    </div>
+    <div class="container">
+        <div class="card card-signin my-5 col-md-4" style="background: rgb(0, 0, 0,0.5); border-radius: 2rem;">
+            <div class="card-body" style="background: transparent; border-radius: 2rem;">
+                <h5 class="card-title text-center" style="color: white">Add Technology</h5>
+                <br>
+            <form [formGroup]="adminAddTechnology" (ngSubmit)="onSubmit()" class="form-signin" action="" onsubmit="">
+                    <div class="form-group">
+                            <input formControlName="technology" style="background: rgb(0, 0, 0,0.5)" type="text" id="technology" class="form-control"
+                            placeholder="Technology" required autofocus>
+                        <label  style="color: white"for="technology">Technology</label>
+                    </div>
+                    <div class="form-group">
+                            <input formControlName="fees" style="background: rgb(0, 0, 0,0.5)" type="number" id="fees" class="form-control"
+                            placeholder="Fees" required autofocus>
+                        <label  style="color: white"for="fees">Fees</label>
+                    </div>
+
+                    <div class="form-group">
+                        <input formControlName="duration" style="background: rgb(0, 0, 0,0.5)" type="text" id="duration"
+                            class="form-control" placeholder="duration" required autofocus>
+                        <label style="color: white" for="duration">Technology</label>
+                    </div>
+                    <div class="form-group">
+                        <input formControlName="prerequisites" style="background: rgb(0, 0, 0,0.5)" type="text" id="prerequisites"
+                            class="form-control" placeholder="prerequisites" required autofocus>
+                        <label style="color: white" for="prerequisites">Prerequisites</label>
+                    </div>
+                    <div class="form-group">
+                        <input formControlName="toc" style="background: rgb(0, 0, 0,0.5)" type="text" id="toc"
+                            class="form-control" placeholder="toc" required autofocus>
+                        <label style="color: white" for="toc">TOC</label>
+                    </div>
+                    <hr style="background-color: white">
+
+                    <button class="btn btn-md btn-success btn-block text-uppercase" type="submit">Add</button>
+
+                </form> -->
+            </div>
+        </div>
+    </div>
+

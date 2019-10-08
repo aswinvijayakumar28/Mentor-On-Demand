@@ -1,0 +1,51 @@
+<nav class="navbar bg-trans navbar-dark">
+
+    <a class="navbar-brand" href="#"><span style="padding: 20px; font-size: 36px;"
+            class="fa fa-address-book"></span>MENTOR ON DEMAND</a>
+
+    <ul class="nav navbar-inverse navbar-right">
+
+
+
+        <li class="pt-2"><a style="color: aliceblue;padding: 7px;" routerLink="/home"><span style="padding: 7px;"
+                    class="fa fa-home"></span> Home</a></li>
+
+
+
+    </ul>
+</nav>
+
+<div class="container ">
+
+
+    <div class="row justify-content-center">
+
+
+        <div style="background: rgb(0, 0, 0,0.5)" class="card card-signin my-5 ">
+            <div class="card-body ">
+                <h5 style="color: white" class="card-title text-center">Admin Sign In</h5>
+           <form [formGroup]="adminLogin" (ngSubmit)="onSubmit()" style="background:transparent" action="admin-menu.html" onsubmit="return(validateUser())"
+                    class="form-signin">
+                    <div class="form-label-group">
+                        <input formControlName="userName" style="background: rgb(0, 0, 0,0.5)" type="email" id="adminInputEmail"
+                            class="form-control" placeholder="Email address" required autofocus>
+                        <label style="color: white" for="adminInputEmail">Email address</label>
+                    </div>
+
+                    <div class="form-label-group">
+                        <input formControlName="password" id="inputPassword" style="background: rgb(0, 0, 0,0.5)" type="password" id="adminInputPassword"
+                            class="form-control" placeholder="Password" required>
+                        <label style="color: white" for="adminInputPassword">Password</label>
+                    </div>
+
+
+                    <input class="btn btn-lg btn-primary btn-block py-1 text-uppercase" type="submit" value="Sing In">
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+</div>
