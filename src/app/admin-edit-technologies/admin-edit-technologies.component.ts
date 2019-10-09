@@ -18,6 +18,7 @@ export class AdminEditTechnologiesComponent implements OnInit {
 
   technology: Technology= new Technology();
 
+  
   ngOnInit() {
 
     this.technologyService.getTechnologies().subscribe( data =>{

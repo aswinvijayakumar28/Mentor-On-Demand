@@ -41,5 +41,13 @@ export class TrainingService {
     return this.httpClient.post<void>('http://localhost:8050/api/training-service/user/trainings',training);
   }
 
+  updateProgress(id : number,progress:number):Observable<void>{
+    return this.httpClient.get<void>('http://localhost:8050/api/training-service/user/updateProgress/'+id+'/'+progress);
+  }
+
+  completeTraining(id:number):Observable<void>{
+    return this.httpClient.get<void>('http://localhost:8050/api/training-service/user/completeTraining/'+id);
+  }
+
 
 }
